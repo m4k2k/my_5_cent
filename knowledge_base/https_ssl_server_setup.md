@@ -59,7 +59,8 @@ IP.4 = ::1
 └───local.conf      <<-- config file for openssl configuration
 └───local.key       <<-- key file holding your private key for the certificate
 │
-└───certs
-        dhparam.pem <<-- param file, used for reverse proxies
-        local.crt   <<-- public certificate
+└───/certs
+    │
+    └───dhparam.pem <<-- param file, used for reverse proxies
+    └───local.crt   <<-- public certificate file
 ```
