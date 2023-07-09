@@ -11,15 +11,13 @@ This is a (private) collection of scripts and snippets, uploaded for backup reas
 |   update_readme.ps1
 |   
 +---app_specific
-|   |   markdown.md
-|   |   plantuml.md
-|   |   
-|   \---homeassistant
+|       markdown.md
+|       plantuml.md
+|       
 +---knowledge_base
 |       https_ssl_server_setup.md
 |       network_setup.md
 |       
-+---powershell_batch
 \---shell_bash
         envirnoment.bash
         gvfs-remove.bash
