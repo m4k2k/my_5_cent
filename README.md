@@ -1,7 +1,7 @@
 
 # my (private) scripts and snippets
 
-This is a (private) collection of scripts and snippets, uploaded for backup reasons.
+This is a (private) collection of scripts and snippets. All software, scripts and ideas are not tested for production use.
 
 ## Table of Content
 
