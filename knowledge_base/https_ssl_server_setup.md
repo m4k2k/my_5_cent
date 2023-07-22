@@ -45,6 +45,7 @@ O = NONE O
 OU = NONE OU
 CN = localhost
 [v3_req]
+basicConstraints = CA:TRUE, pathlen:1
 keyUsage = keyEncipherment, dataEncipherment, nonRepudiation, digitalSignature
 extendedKeyUsage = serverAuth
 subjectAltName = @alt_names
@@ -56,7 +57,7 @@ IP.3 = 127.0.0.3
 IP.4 = ::1
 ```
 
-- STEP2: generate certificate `openssl req -x509 -nodes -days 365 -config /test/local.conf -newkey rsa:4096 -keyout /test/local.key -out /test/certs/local.crt`
+- STEP2: generate certificate `openssl req -x509 -nodes -days 365 -newkey rsa:4096 -config /test/local.conf -keyout /test/local.key -out /test/certs/local.crt`
 - STEP3: (optional) generate dhparm e.g. for reverse proxies `openssl dhparam -out /test/certs/dhparam.pem 4096`
 
 ## final file/folder structure
