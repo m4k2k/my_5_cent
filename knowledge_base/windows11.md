@@ -14,6 +14,8 @@ Download Driver from Intel Website
 For Intel HD 5000 Driver
 https://www.intel.de/content/www/de/de/support/products/81495/graphics/intel-hd-graphics-family/intel-hd-graphics-5000.html
 
+I used "15.40.48.5171"
+
 The driver is not certified for surface, therefore the installer wont work
 
 use universal extractor v2 to extract wix-installer file
