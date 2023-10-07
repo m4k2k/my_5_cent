@@ -1,5 +1,12 @@
 
+# Windows Tricks
 
+Table of Contents
+
+- [Windows Tricks](#windows-tricks)
+  - [Core Isolation on Surface Pro 3](#core-isolation-on-surface-pro-3)
+  - [PowerShell Tricks](#powershell-tricks)
+  - [Get Serial-Number of Notebook/PC](#get-serial-number-of-notebookpc)
 
 ## Core Isolation on Surface Pro 3
 
@@ -32,4 +39,18 @@ search for oem11.inf and unistall/remove
 
 reboot - done, core isolation can be enabled now
 
+## PowerShell Tricks
 
+## Get Serial-Number of Notebook/PC
+
+Query:
+
+`wmic bios get serialnumber`
+
+Response:
+
+```
+PS C:\> wmic bios get serialnumber
+SerialNumber
+To be filled by O.E.M.
+```
