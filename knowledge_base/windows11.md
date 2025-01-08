@@ -7,6 +7,7 @@ Table of Contents
   - [Core Isolation on Surface Pro 3](#core-isolation-on-surface-pro-3)
   - [PowerShell Tricks](#powershell-tricks)
   - [Get Serial-Number of Notebook/PC](#get-serial-number-of-notebookpc)
+  - [Bluetooth Debugging](#bluetooth-debugging)
 
 ## Core Isolation on Surface Pro 3
 
@@ -54,3 +55,15 @@ PS C:\> wmic bios get serialnumber
 SerialNumber
 To be filled by O.E.M.
 ```
+
+## Bluetooth Debugging
+
+
+debug bluetooth in windows using wireshark
+
+Tool FAQ
+https://learn.microsoft.com/en-us/windows-hardware/drivers/bluetooth/testing-btp-tools-btvs
+
+Download:
+https://learn.microsoft.com/en-us/windows-hardware/drivers/bluetooth/testing-btp-setup-package#download-the-btp-software-package
+

@@ -1,4 +1,23 @@
 
+# sudo session config
+
+By default, a standard sudo session lasts for 5 minutes (on some distributions, e.g., Ubuntu, it is 15 minutes)
+
+don't use `sudo su`
+
+`Defaults        timestamp_timeout=10`
+
+`
+Defaults        mail_badpass
+Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Defaults        timestamp_timeout=10
+
+# Host alias specification
+`
+
+`sudo visudo`
+
+
 # Error handling
 
 ## apt public key errors
