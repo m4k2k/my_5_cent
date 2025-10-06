@@ -14,9 +14,21 @@ This is a (private) collection of scripts and snippets. All software, scripts an
 |       markdown.md
 |       plantuml.md
 |       
++---hardware
+|       logitech_g502.md
+|       
 +---knowledge_base
-|       https_ssl_server_setup.md
+|       ai_chatbots_rules.md
+|       debian.md
+|       https_ssl_certificates.md
+|       linux.md
 |       network_setup.md
+|       pxe_setup.md
+|       usbip.md
+|       windows11.md
+|       
++---security
+|       security-trix.md
 |       
 \---shell_bash
         envirnoment.bash
