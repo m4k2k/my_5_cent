@@ -6,6 +6,7 @@ Table of Contents
   - [debian / raspberry pi](#debian--raspberry-pi)
     - [setup hostname](#setup-hostname)
     - [setup static ip for eth0](#setup-static-ip-for-eth0)
+    - [enable / disable wifi](#enable--disable-wifi)
 
 ## debian / raspberry pi
 
@@ -49,3 +50,11 @@ reboot network service afterwards to apply changes
 `sudo systemctl restart systemd-networkd`
 
 use `ip a` to verify new ip
+
+### enable / disable wifi
+
+`sudo nmcli radio wifi off`
+
+To re-enable, use
+
+`sudo nmcli radio wifi on`
