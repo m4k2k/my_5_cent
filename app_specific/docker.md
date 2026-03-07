@@ -4,14 +4,16 @@
 
 short/long versions windows/powershell:
 
-```shell
+```powershell
 docker inspect --f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
 docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 ```
 
 ## delete dangling images script
 
-```shell
+linux/shell
+
+```bash
 echo "delete all untagged images script running.."
 
 # Find images which are <untagged>
