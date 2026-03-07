@@ -1,16 +1,29 @@
-
-
 # Tricks for handling and debugging docker containers
 
-
 ## show all ips of docker container
-short/long versions:
+
+short/long versions windows/powershell:
+
 ```shell
 docker inspect --f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
 docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 ```
 
+## delete dangling images script
 
+```shell
+echo "delete all untagged images script running.."
+
+# Find images which are <untagged>
+images_to_delete=$(docker images --filter "dangling=true" -q)
+echo "delete images:"
+echo $images_to_delete
+
+# delete <untagged> images
+docker rmi $images_to_delete
+
+echo "script done"
+```
 
 ## using docker events
 
@@ -23,7 +36,6 @@ First start docker events in the background to see whats going on.
 Then run your failing docker run ... command. Then you should see something like the following on screen:
 
 `2015-12-22T15:13:05.503402713+02:00 xxxxxxxacd8ca86df9eac5fd5466884c0b42a06293ccff0b5101b5987f5da07d: (from xxx/xxx:latest) die`
-
 
 Then you can get the startup hex id from previous message or the output of the run command. Then you can use it with the logs command:
 
