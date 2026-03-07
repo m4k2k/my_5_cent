@@ -1,19 +1,26 @@
+# Linux Tricks
 
+## Find open ports
 
-# reboot investigation
+`sudo netstat -an | grep LISTEN`
 
-## investigation
+filtered out local only ports
+`sudo netstat -ntlp | grep -vEe "\s+127[.]|::1"`
 
-`uptime`
+## reboot investigation
+
+### investigation
+
 show system up time, current loggedin users
+`uptime`
 
-`last --hostlast --dns --system --fullnames --fulltimes --limit 5`
 show last 5 login/reboot with users and its hosts
+`last --hostlast --dns --system --fullnames --fulltimes --limit 5`
 
-`who -a`
 show last reboot and currently loggedin users
+`who -a`
 
-## advanced audit trail / get more info next time
+### advanced audit trail / get more info next time
 
 Source: https://www.cyberciti.biz/tips/howto-log-user-activity-using-process-accounting.html
 
@@ -23,11 +30,11 @@ debian install
 show last executed commands
 `lastcomm`
 
+## list all disks, partitions and mounted drives
 
-# list all disks, partitions and mounted drives
 sudo lsblk -o model,name,fstype,size,label,mountpoint
 
-# linux AV
+## linux AV
 
 sudo deb http://http.us.debian.org/debian stable main contrib non-free
 
