@@ -2,10 +2,19 @@
 
 ## Find open ports
 
+show all open ports
+
 `sudo netstat -an | grep LISTEN`
+
+alternative version
+`sudo netstat -tulpn | grep LISTEN`
 
 filtered out local only ports
 `sudo netstat -ntlp | grep -vEe "\s+127[.]|::1"`
+
+another alternative version
+`cat /proc/net/tcp | grep :0050`
+(ports here are in hex, 0050 = 80)
 
 ## reboot investigation
 
@@ -32,21 +41,17 @@ show last executed commands
 
 ## list all disks, partitions and mounted drives
 
-sudo lsblk -o model,name,fstype,size,label,mountpoint
+`sudo lsblk -o model,name,fstype,size,label,mountpoint`
 
 ## linux AV
 
-sudo deb http://http.us.debian.org/debian stable main contrib non-free
-
-sudo apt install clamav
+```bash
+sudo deb http://http.us.debian.org/debian stable main contrib non-freesudo apt install clamav
 sudo apt install clamav-freshclam
 sudo apt install freshclam
-apt info clamav
-
-sudo freshclam
-sudo clamscan --exclude-dir="^/sys" -ir / >> /tmp/clamfound.txt
-
-sudo apt install rkunter
+apt info clamavsudo freshclam
+sudo clamscan --exclude-dir="^/sys" -ir / >> /tmp/clamfound.txtsudo apt install rkunter
 sudo rkhunter --propupd
 sudo rkhunter -c
 sudo cat /var/log/rkhunter.log
+```
