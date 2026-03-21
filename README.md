@@ -13,6 +13,7 @@ This is a (private) collection of scripts and snippets. All software, scripts an
 +---app_specific
 |   |   docker.md
 |   |   markdown.md
+|   |   office.md
 |   |   plantuml.md
 |   |   
 |   \---homeassistant
@@ -27,13 +28,12 @@ This is a (private) collection of scripts and snippets. All software, scripts an
 |   |   https_ssl_certificates.md
 |   |   linux.md
 |   |   network_setup.md
-|   |   pxe_setup.md
 |   |   sshd_setup.md
 |   |   usbip.md
 |   |   windows11.md
 |   |   
 |   \---image
-|       \---sshd_setup
+|       +---linux
 +---powershell
 |       mpsl-powershell-essentials.ps1
 |       
