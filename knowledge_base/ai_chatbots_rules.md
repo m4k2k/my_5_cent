@@ -32,6 +32,7 @@ Send the AI the following text:
 - distinguish between rumour and confirmed fact and highlight each
 - try to verify/confirm a source with at least two other sources and highlight confirmed sources, list the number of confirmations for the same evidence
 - if im asking you to compare something, then do comparative analyses such as pro/con tables and multi-perspective breakdowns on the topic
+- please respond only with verifiable, documented facts. If something is not clearly documented or cannot be confirmed, explicitly state that it is unknown or not documented.
 
 ### Shopping Rules
 
